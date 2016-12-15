@@ -1,0 +1,118 @@
+Practice 2014 - Round 1
+
+===========================
+PRIME FACTORS
+
+Return all prime factors of a number n as string separated with "," (quotes for clarity).
+The factors should be ordered ascending.
+E.g.:
+ primeFactors(90) = "2,3,3,5" (i.e. 90 = 2 * 3 * 3 * 5)
+
+Constraints:
+  n will be a positive integer less then 10000.
+
+Input parameters:
+  n - the number that needs to be factorized.
+
+Return value:
+  String - the prime factors of n separated by "," (quotes for clarity).
+Class Name:
+  PrimeFactors
+
+Method signature:
+  public String primeFactors(int n)
+
+Test Case 1:
+  primeFactors(47) = "47"
+
+Test Case 2:
+  primeFactors(95) = "5,19"
+
+Test Case 3:
+  primeFactors(94) = "2,47"
+
+Test Case 4:
+  primeFactors(101) = "101"
+
+Test Case 5:
+  primeFactors(51) = "3,17"
+
+Test Case 6:
+  primeFactors(86) = "2,43"
+
+Test Case 7:
+  primeFactors(98) = "2,7,7"
+
+Test Case 8:
+  primeFactors(45) = "3,3,5"
+
+Test Case 9:
+  primeFactors(90) = "2,3,3,5"
+
+Test Case 10:
+  primeFactors(74) = "2,37"
+  
+=====================================================
+
+DRINKING BUDDIES
+
+Peter and Anna recently started dating. They met at a beer tasting party, and they fell in love.
+Every weekend now, they go out in pubs and drink different beers. At the end of the night, 
+they can't settle the score about who drank more beer.
+
+You are given an array of strings which represent the beer receipts. Each receipt contains 
+a name (Peter or Anna) and the volume of the beer bottle that he/she drank.
+
+Calculate which one of them drank the most beer and return 'Peter' or 'Anna'. If they drank 
+the same amount of beer, return 'Tied' (quotes for clarity).
+
+Example:
+	receipts = {"Anna 0.4","Peter 0.25","Anna 0.5","Peter 0.5","Peter 0.33"}
+	Anna drank 0.9l of beer in total, while Peter drank 1.08l, which makes him the winner.
+
+Constraints:
+  receipts will contain between 5 and 20 elements inclusive.
+  each string in receipts will be of the form ' '
+  only 'Anna' and 'Peter' will appear as names. 
+  the bottle sizes will be 0.25, 0.33, 0.4 and 0.5
+
+Input parameters:
+  receipts - the beer receipts
+  
+Return value:
+  String - the winner or 'Tied' if none.
+Class Name:
+  DrinkingBuddies
+
+Method signature:
+  public String whoWon(String[] receipts)
+
+Test Case 1:
+  whoWon({"Anna 0.4","Peter 0.25","Anna 0.5","Peter 0.5","Peter 0.33"}) = "Peter"
+
+Test Case 2:
+  whoWon({"Anna 0.33","Peter 0.5","Anna 0.33","Peter 0.5","Anna 0.33","Peter 0.5","Peter 0.33","Peter 0.33"}) = "Peter"
+
+Test Case 3:
+  whoWon({"Peter 0.25","Anna 0.4","Anna 0.33","Peter 0.4","Peter 0.25","Peter 0.33","Anna 0.25","Anna 0.4","Peter 0.25","Anna 0.4"}) = "Anna"
+
+Test Case 4:
+  whoWon({"Peter 0.33","Anna 0.5","Peter 0.4","Peter 0.25","Anna 0.33"}) = "Peter"
+
+Test Case 5:
+  whoWon({"Anna 0.25","Anna 0.5","Peter 0.5","Anna 0.33","Anna 0.4","Anna 0.5"}) = "Anna"
+
+Test Case 6:
+  whoWon({"Peter 0.5","Peter 0.4","Peter 0.5","Peter 0.25","Anna 0.5","Peter 0.33","Peter 0.5"}) = "Peter"
+
+Test Case 7:
+  whoWon({"Anna 0.25","Peter 0.33","Anna 0.33","Anna 0.5","Peter 0.25","Peter 0.4","Anna 0.5","Anna 0.4","Anna 0.33","Peter 0.25"}) = "Anna"
+
+Test Case 8:
+  whoWon({"Peter 0.4","Peter 0.25","Anna 0.5","Anna 0.4","Anna 0.4","Peter 0.5"}) = "Anna"
+
+Test Case 9:
+  whoWon({"Anna 0.4","Peter 0.5","Anna 0.25","Anna 0.25","Peter 0.4","Anna 0.25","Peter 0.25"}) = "Tied"
+
+Test Case 10:
+  whoWon({"Peter 0.33","Anna 0.33","Peter 0.25","Anna 0.5","Anna 0.5","Peter 0.5","Peter 0.25"}) = "Tied"

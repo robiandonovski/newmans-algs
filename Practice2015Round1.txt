@@ -1,0 +1,138 @@
+Practice 2016 - Round 2
+======================================================
+TABLE TENNIS SCORE
+
+You may remember Peter and Anna. They were the ones who started dating last year and were drinking beer every weekend.
+Well, now they decided to take on sports. Every weekend, they play table-tennis.
+
+Again, they have the same problem: keeping up the score.
+The room where they play table-tennis has a system installed which allows them to enter their names and it will track 
+the result per each game.
+However, at the end of the day, it wont tell them who won that day. That's where you need to help them.
+
+The system will give you one string containing the names of the players and the scores per each game. You need to output 
+the winner and the overall score with which he/she won.
+
+Examples:
+
+Input: "Anna Peter 21:15 19:21 21:14 19:21 21:18"
+Output: "Anna 3:2"
+
+Input: "Anna Peter 21:18 10:21 21:23"
+Ouput: "Peter 2:1"
+
+Input parameters:
+ score - the string containing the score as outputted by the system
+
+Constraints:
+ score will always be of the proper format:
+   the pieces of the string will be divided by one empty space
+   the result pieces will be divided with one colon without spaces
+ the first two pieces of the string will be the names of player1 and player2
+ the number of games, i.e. the number of remaining pieces will always be odd
+ the number of points per game will always be positive and both of them will never be same
+
+Return value:
+  string - the winner of the game and the overall score, properly formatted.
+Class Name:
+  TableTennisScore
+
+Method signature:
+  public String whoWon(String score)
+
+Test Case 1:
+  whoWon("Anna Peter 21:15 19:21 21:14 19:21 21:18") = "Anna 3:2"
+
+Test Case 2:
+  whoWon("Anna Peter 21:18 10:21 21:23") = "Peter 2:1"
+
+Test Case 3:
+  whoWon("Peter Anna 23:21 21:18 19:21 18:21 11:21") = "Anna 3:2"
+
+Test Case 4:
+  whoWon("Anna Peter 17:21 21:13 21:18 21:12 18:21 21:12 21:10") = "Anna 5:2"
+
+Test Case 5:
+  whoWon("Peter Anna 21:18") = "Peter 1:0"
+
+Test Case 6:
+  whoWon("Anna Peter 19:21 21:12 16:21 15:21 21:14 21:18 18:21 21:18 12:21") = "Peter 5:4"
+
+Test Case 7:
+  whoWon("Peter Anna 17:21 21:14 14:21 21:18 21:19") = "Peter 3:2"
+
+Test Case 8:
+  whoWon("Peter Anna 19:21 21:18 10:21 21:14 13:21 10:21 13:21 21:17 16:21") = "Anna 6:3"
+
+Test Case 9:
+  whoWon("Anna Peter 21:10 21:12 21:15") = "Anna 3:0"
+
+Test Case 10:
+  whoWon("Peter Anna 15:21") = "Anna 1:0"
+  
+========================================================
+
+THE SUBSEQUENCES
+
+Lets define a functions split(n) where n is an integer. This function returns an array of the digits of n.
+For example split(5125) returns [5,1,2,5].
+
+You are given three integer numbers: A, B and C. Your task is the following:
+
+Find all numbers X between A and B inclusive such that split(C) is a subsequence of split(X).
+Return how many X's you've found.
+
+Example:
+
+ A = 100, B = 650, C = 65
+ The result is 11 and the numbers found are:
+ 165, 265, 365, 465, 565, 605, 615, 625, 635, 645, 650
+
+Input parameters:
+ A - integer, the starting point
+ B - integer, the end point
+ C - integer, the number whose digits will be searched for
+
+Constraints:
+ A,B and C will each be between 1 and 1000000 (million)
+ A will always be less than or equal to B
+
+Return value:
+  int - the count of numbers between A and B inclusive that fulfill the problem requirements.
+Class Name:
+  TheSubsequences
+
+Method signature:
+  public int count(int A, int B, int C)
+
+Test Case 1:
+  count(26, 69, 3) = 13
+
+Test Case 2:
+  count(11, 100, 4) = 18
+
+Test Case 3:
+  count(77, 78, 4) = 0
+
+Test Case 4:
+  count(13834, 26066, 1380) = 14
+
+Test Case 5:
+  count(1, 1000000, 1) = 468560
+
+Test Case 6:
+  count(25272, 31576, 757) = 33
+
+Test Case 7:
+  count(23051, 27967, 62) = 383
+
+Test Case 8:
+  count(6122, 30043, 8) = 8674
+
+Test Case 9:
+  count(10, 999999, 46) = 114265
+
+Test Case 10:
+  count(9, 6405, 95) = 172
+  
+==========================================================

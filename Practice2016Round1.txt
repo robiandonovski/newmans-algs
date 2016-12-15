@@ -1,0 +1,121 @@
+Practice 2016 - Round 1
+===========================================================================
+THE LONE INTEGER
+Given an array of integers, find the integer that occurs only once.
+All the other integers are present twice.
+
+Input parameters:
+ a - array of integers
+ 
+Constraints:
+ the array will contain odd number of elements
+ the number of elements in the array is between 1 and 99 inclusive
+ each element in the array will be between 1 and 999
+ 
+Return value:
+  int - the integer that occurs only once in the array
+Class Name:
+  TheLoneInteger
+
+Method signature:
+  public int findIt(int[] a)
+
+Test Case 1:
+  findIt({1, 2, 1}) = 2
+
+Test Case 2:
+  findIt({2, 5, 1, 5, 2}) = 1
+
+Test Case 3:
+  findIt({3}) = 3
+
+Test Case 4:
+  findIt({4, 3, 2, 1, 1, 2, 3}) = 4
+
+Test Case 5:
+  findIt({1, 3, 5, 7, 9, 7, 5, 3, 1}) = 9
+
+Test Case 6:
+  findIt({1, 2, 3, 4, 5, 6, 7, 8, 9, 1, 2, 3, 4, 6, 7, 8, 9}) = 5
+
+Test Case 7:
+  findIt({2, 8, 2, 6, 6, 4, 4}) = 8
+
+Test Case 8:
+  findIt({1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 9, 8, 7, 6, 5, 4, 3, 2, 1}) = 10
+
+Test Case 9:
+  findIt({5, 4, 3, 2, 1, 5, 4, 3, 2}) = 1
+
+Test Case 10:
+  findIt({11, 22, 33, 44, 55, 66, 77, 66, 55, 44, 33, 22, 11}) = 77
+
+===========================================================================
+
+POPULAR TWEETS
+
+You are given a list of tweets. Find and return the most popular hashtag.
+A hash tag is a word that starts with '#' and is case insensitive (e.g. #BadOrange is the same as #badorange).
+The most popular hashtag is the one that is met in most of the tweets. Having the same hashtag multiple times in a tweet doesn't make it more popular.
+IF there is a tie between two or more hashtags, return the one which comes lexicographically first. (e.g. #alpha instead of #beta)
+
+Examples:
+
+Tweets:
+"#a #a #a #b first tweet"
+"#b second tweet"
+The result is "#b" since it appears in both tweets
+
+Tweets:
+"The quick brown #fox jumps over the lazy #dog"
+"#Fox with the best shows on #tv"
+"#Dog finds a #fox and barks at another #dog"
+The result is "#fox". It appears in all three tweets and is returned in lowercase.
+
+Input parameters:
+ tweets - an array of strings representing the tweets
+ 
+Constraints:
+ tweets will contain between 1 and 50 elements inclusive
+ every element of tweets will be a non-empty string containing only alphabetic leters, blank spaces and '#'
+ there will be at least one hashtag in all the tweets
+
+Return value:
+  string - the most popular hashtag, in lowercase letters
+Class Name:
+  PopularTweets
+
+Method signature:
+  public String mostPopular(String[] tweets)
+
+Test Case 1:
+  mostPopular({"The quick brown #fox jumps over the lazy #dog","#Fox with the best shows on #tv","#Dog finds a #fox and barks at another #dog"}) = "#fox"
+
+Test Case 2:
+  mostPopular({"#jnf Fcif ql sfopj","Mjiy #gtnt ut pfnv","ql #gtnt Mjiy Nuetc pfnv pfnv Vfkbw Mjiy #hdynu xu","Nuetc Nuetc ql #gtnt Xcd Nuetc"}) = "#gtnt"
+
+Test Case 3:
+  mostPopular({"#jnf #jnf Vfkbw ql Xcd","sfopj ut Mjiy ql Fcif Xcd sfopj ql #gtnt","pfnv Fcif #Nudnoz sfopj Nuetc Xcd Mjiy Vfkbw #hdynu Mjiy Mjiy"}) = "#gtnt"
+
+Test Case 4:
+  mostPopular({"sfopj xu Nuetc #Nudnoz Mjiy ut xu","pfnv Mjiy #gtnt sfopj sfopj sfopj Nuetc sfopj #jnf Xcd ql xu","sfopj ut ut ut Fcif #jnf xu Fcif","xu Fcif #Nudnoz Nuetc Fcif Fcif Mjiy Fcif Vfkbw ql"}) = "#jnf"
+
+Test Case 5:
+  mostPopular({"Vfkbw ut ut Vfkbw sfopj ql #jnf sfopj xu","xu ql ql Mjiy sfopj xu #hdynu #Wkfhf ut","#hdynu Fcif Mjiy #Nudnoz Mjiy xu Mjiy xu"}) = "#hdynu"
+
+Test Case 6:
+  mostPopular({"Xcd #jnf Mjiy Mjiy ut Vfkbw ut #hdynu xu Vfkbw","#jnf Nuetc #gtnt sfopj Vfkbw Nuetc","#Wkfhf xu xu Mjiy Mjiy pfnv ql Nuetc","sfopj Mjiy Fcif Mjiy sfopj #Nudnoz Nuetc"}) = "#jnf"
+
+Test Case 7:
+  mostPopular({"pfnv Vfkbw Fcif Nuetc Vfkbw #Nudnoz","Xcd ut Fcif pfnv sfopj pfnv #Wkfhf Fcif","#gtnt sfopj pfnv ql xu Vfkbw","Fcif ql Nuetc #jnf Nuetc sfopj Vfkbw ql Fcif Vfkbw"}) = "#gtnt"
+
+Test Case 8:
+  mostPopular({"Xcd #hdynu Mjiy pfnv ut xu Nuetc pfnv Mjiy #jnf","ql ut ql Nuetc sfopj Mjiy pfnv Xcd Fcif pfnv #jnf","#Wkfhf Vfkbw sfopj Mjiy ql xu","#gtnt Xcd Xcd xu #gtnt pfnv ql ql"}) = "#jnf"
+
+Test Case 9:
+  mostPopular({"Fcif ut #gtnt Nuetc xu","#Nudnoz #jnf Mjiy Fcif ql pfnv Nuetc xu ut Xcd Mjiy ql","xu ut ut ql pfnv #jnf ut ut Nuetc pfnv","ql Mjiy ql #jnf Vfkbw xu sfopj Nuetc"}) = "#jnf"
+
+Test Case 10:
+  mostPopular({"Mjiy #Nudnoz #jnf pfnv sfopj Vfkbw Xcd Xcd sfopj Mjiy","#hdynu Mjiy xu ql #Nudnoz","Vfkbw ql Mjiy #hdynu xu #jnf","#Nudnoz xu ql pfnv pfnv","#gtnt Nuetc ql #jnf pfnv"}) = "#jnf"
+  
+=======================================================
